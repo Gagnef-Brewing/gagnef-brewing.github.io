@@ -1,5 +1,6 @@
 ---
 layout: beer
+title: "Mikes Blaskiga Lager"
 name: Mikes Blaskiga Lager
 alcohol: 7.5%
 sale_date: 2022-01-03
