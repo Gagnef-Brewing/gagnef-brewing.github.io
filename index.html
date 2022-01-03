@@ -5,9 +5,9 @@ layout: home
 <div class="w-full bg-center bg-cover h-screen flex flex-col" style="background-image: url(/assets/images/humle.jpg);">
 
   <nav class="bg-gray-900 bg-opacity-50">
-    <div class="container px-6 py-4 mx-auto lg:flex lg:justify-between sm:justify-center lg:items-center">
+    <div class="container px-6 py-4 mx-auto lg:flex md:justify-between justify-center lg:items-center">
         <div class="lg:flex lg:items-center">
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center md:justify-between">
                 <div>
                     <a class="" href="/">
                       <img src="/assets/images/logo.png" class="h-24 md:m-4 sm:mb-4 transition duration-200 transform invert"/>
@@ -24,7 +24,7 @@ layout: home
       <h1 class="text-lg md:text-2xl uppercase font-bold text-white">Ditt lokala bryggeri i gagnef</h1>
     </div>
     
-    <div class="flex flex-wrap md:space-x-4 space-y-4 items-center justify-center ">
+    <div class="flex flex-wrap flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 items-center justify-center ">
       {% include simple-card.html
         title="Våra öl"
         href="/beers"
