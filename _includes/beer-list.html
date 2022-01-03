@@ -1,7 +1,7 @@
 {% assign beers = site.beers | sort: "sale_date" | reverse %}
 
 {% for beer in beers %}
-<div class="container px-6 py-16 mx-auto">
+<div class="container px-6 py-16 mx-auto bg-white">
     <div class="items-center lg:flex">
       <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
         <img class="w-full h-full lg:max-w-2xl rounded-md" src="{{ beer.image }}" alt="{{ beer.name }}">

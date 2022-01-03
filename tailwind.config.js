@@ -12,6 +12,7 @@ module.exports = {
         'md': '710px',
       },
       colors: {
+        white: '#fbfbfb',
         gagnef_green: {
           100: '#f7fafc',
           // ...
