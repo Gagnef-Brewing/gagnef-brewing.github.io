@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
+      screens: {
+        'md': '710px',
+      },
       colors: {
         gagnef_green: {
           100: '#f7fafc',
