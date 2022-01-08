@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
+      fontFamily: {
+        title: ['"EB Garamond"', 'serif'],
+      },
       colors: {
         white: '#fbfbfb',
         gagnef_green: {
