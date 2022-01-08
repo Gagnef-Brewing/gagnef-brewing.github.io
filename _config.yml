@@ -23,7 +23,7 @@ email: oskaremilsson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Gagnef Brewing
 baseurl: "" # the subpath of your site, e.g. /blog
-url: gagnefbrewing.com # the base hostname & protocol for your site, e.g. http://example.com
+url: https://gagnefbrewing.com # the base hostname & protocol for your site, e.g. http://example.com
 domain: gagnefbrewing.com
 version: 0.0.4
 
