@@ -1,0 +1,27 @@
+<div id="construction-info" class="w-full text-white bg-blue-500">
+  <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+    <div class="flex">
+      <p class="mx-3">Kul att se dig! Vi håller just nu på att brygga hemsidan. Snart klart för tappning!</p>
+    </div>
+
+    <button id="construction-read" class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-gray-600 focus:outline-none">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  if(readCookie('construction-read') === 'true') {
+    document.querySelector('#construction-info').classList.add('hidden');
+  }
+
+  document.querySelector('#construction-read').addEventListener("click",function() {
+    if (readCookie('cookie-accepted') == 'true') {
+      //only create cookie if cookies are allowed
+      createCookie('construction-read', 'true', 1);
+    }
+    document.querySelector('#construction-info').classList.add('hidden');
+  });
+</script>
