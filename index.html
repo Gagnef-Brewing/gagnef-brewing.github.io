@@ -4,7 +4,7 @@ layout: home
 
 <div class="w-full bg-center bg-cover min-h-screen flex flex-col" style="background-image: url(/assets/images/home-bg.jpg);">
   {% include under-contruction.html %}
-  <nav class="bg-gray-900 bg-opacity-50">
+  <nav class="z-10">
     <div class="container px-6 py-4 mx-auto lg:flex md:justify-between justify-center lg:items-center">
         <div class="lg:flex lg:items-center">
             <div class="flex items-center justify-center md:justify-between">
@@ -18,24 +18,22 @@ layout: home
     </div>
   </nav>
 
-  <div class="flex flex-col items-center justify-center w-full h-screen bg-gray-900 bg-opacity-50 space-y-4 pb-4">
+  <div class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-gray-900 bg-opacity-40 space-y-4 pb-4">
 
-    <div>
-      <h1 class="text-lg md:text-2xl uppercase font-bold text-teal-100">Ditt lokala bryggeri</h1>
-    </div>
+    <h1 class="text-5xl sm:text-8xl uppercase font-bold text-teal-100 text-center">Ditt lokala bryggeri</h1>
 
     <div class="flex flex-wrap flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 items-center justify-center ">
-      {% include simple-card.html
-        title="Produkter"
-        href="/products"
-        img_src="/assets/images/beers/vintarti-mild-ale.jpeg"
-      %}
+      <a href="/products">
+        {% include big-button.html
+          text="Se våra produkter"
+        %}
+      </a>
 
-      {% include simple-card.html
-        title="Bryggeriet"
-        href="/brewery"
-        img_src="/assets/images/olfat.jpeg"
-      %}
+      <a href="/brewery">
+        {% include big-button.html
+          text="Läs mer om bryggeriet"
+        %}
+      </a>
     </div>
   </div>
 </div>
