@@ -1,8 +1,8 @@
 module.exports = {
-  purge: [
+  content: [
     './_includes/**/*.html',
     './_layouts/**/*.html',
-    './beers/*.md',
+    './beers/*.html',
     './*.html',
   ],
   darkMode: 'media',

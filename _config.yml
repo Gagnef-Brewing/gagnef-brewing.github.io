@@ -29,6 +29,8 @@ version: 0.0.4
 
 # Build settings
 # theme: minima
+theme: jekyll-theme-primer
+
 plugins:
   - jekyll-feed
   - jekyll-postcss
