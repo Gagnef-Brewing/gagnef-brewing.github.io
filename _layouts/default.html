@@ -7,6 +7,12 @@
     {% include menu.html %}
 
     <div class="bg-white md:container md:mx-auto pb-4">
+      {% assign breadcrumbs = page.url | split: '/' | shift %}
+      {%
+        include breadcrumbs.html
+        breadcrumbs = breadcrumbs
+      %}
+
       {{ content }}
     </div>
 
