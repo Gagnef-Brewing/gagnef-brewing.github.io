@@ -22,7 +22,7 @@
     </span>
 
     <a href="{{ breadcrumb.url | default: page.url}}" class="text-{{text_color}} hover:underline">
-      {{ breadcrumb.title | default: page.name | remove:'.html' | capitalize}}
+      {{ breadcrumb.title | default: page.title | remove:'.html' | capitalize}}
     </a>
 
   {% endfor %}
