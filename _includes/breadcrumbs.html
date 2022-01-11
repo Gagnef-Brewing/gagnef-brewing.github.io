@@ -1,5 +1,5 @@
 {% assign icon_size = "w-4 h-4" %}
-{% assign text_color = "gray" %}
+{% assign text_color = "gray-600" %}
 
 <div class="container flex items-center p-4 mx-auto overflow-y-auto whitespace-nowrap text-sm">
   <a href="/" class="text-{{ text_color }}-600">
@@ -12,7 +12,7 @@
     {% assign breadcrumb = site.data.page_data[crumb] %}
 
     {% if forloop.last == true %}
-      {% assign text_color = "teal" %}
+      {% assign text_color = "gray-900" %}
     {% endif %}
 
     <span class="mx-2 text-gray-500">
@@ -21,7 +21,7 @@
       </svg>
     </span>
 
-    <a href="{{ breadcrumb.url | default: page.url}}" class="text-{{text_color}}-600 hover:underline">
+    <a href="{{ breadcrumb.url | default: page.url}}" class="text-{{text_color}} hover:underline">
       {{ breadcrumb.title | default: page.name | remove:'.html' | capitalize}}
     </a>
 

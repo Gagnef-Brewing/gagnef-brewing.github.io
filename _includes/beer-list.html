@@ -1,11 +1,11 @@
 {% assign beers = site.beers | sort: "sale_date" | reverse %}
 
 {% for beer in beers %}
-  <div class="container mx-auto bg-white">
+  <div class="container mx-auto bg-white min-h-screen">
       <div class="items-center flex flex-col sm:flex-row">
         <div class="flex items-center justify-center w-full mt-6 lg:mt-0">
-          <a href="{{ beer.url | prepend: beer.baseurl }}">
-            <img class="w-full lg:max-w-2xl rounded-md" src="{{ beer.image }}" alt="{{ beer.name }}">
+          <a href="{{ beer.url | prepend: beer.baseurl }}" class="p-4">
+            <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16" src="{{ beer.image }}" alt="{{ beer.name }}">
           </a>
         </div>
 
