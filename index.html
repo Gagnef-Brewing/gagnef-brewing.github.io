@@ -3,7 +3,7 @@ layout: home
 ---
 
 <div class="w-full bg-center bg-cover min-h-screen flex flex-col" style="background-image: url(/assets/images/home-bg.jpg);">
-  {% include under-contruction.html %}
+  {% include molecules/under-contruction.html %}
   <nav class="z-10">
     <div class="container px-6 py-4 mx-auto lg:flex sm:justify-between justify-center lg:items-center">
         <div class="lg:flex lg:items-center">
@@ -23,13 +23,13 @@ layout: home
 
     <div class="flex flex-col space-y-8 sm:flex-row sm:space-x-8 sm:space-y-0 items-center justify-center">
       <a href="/products" class="w-full sm:w-auto">
-        {% include big-button.html
+        {% include components/big-button.html
           text="Se våra produkter"
         %}
       </a>
 
       <a href="/brewery">
-        {% include big-button.html
+        {% include components/big-button.html
           text="Läs mer om bryggeriet"
         %}
       </a>

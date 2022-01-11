@@ -9,7 +9,7 @@
     <div class="bg-white md:container md:mx-auto pb-4">
       {% assign breadcrumbs = page.url | split: '/' | shift %}
       {%
-        include breadcrumbs.html
+        include components/breadcrumbs.html
         breadcrumbs = breadcrumbs
       %}
 
@@ -17,8 +17,8 @@
     </div>
 
     {% include footer.html %}
-    {% include age-check.html %}
-    {% include cookie-consent.html %}
+    {% include molecules/age-check.html %}
+    {% include molecules/cookie-consent.html %}
   </body>
 
 </html>

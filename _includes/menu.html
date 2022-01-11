@@ -13,7 +13,7 @@
           {% for page_data in site.data.page_data %}
             {% for pg in page_data %}
               {%
-                include menu-list-item.html
+                include components/menu-list-item.html
                 url = pg.url
                 text = pg.title
               %}
