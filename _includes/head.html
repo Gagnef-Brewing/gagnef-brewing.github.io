@@ -19,12 +19,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  {% for image in site.static_files %}
-    {% if image.path contains 'images' %}
-      <link rel="prefetch" href="{{ site.baseurl }}{{ image.path }}" />
-    {% endif %}
-  {% endfor %}
-
   <script>
     function createCookie(name,value,days) {
       var expires = "";
