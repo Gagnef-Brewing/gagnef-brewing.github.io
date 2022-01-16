@@ -17,6 +17,10 @@
   document.querySelector('#cookie-notice-accept').addEventListener("click",function() {
     createCookie('cookie-accepted','true',31);
     document.querySelector('#cookie-notice').classList.add('hidden');
+
+    if(window.ageCheckOK) {
+      createCookie('age-check','true',31);
+    }
   });
 
 </script>
