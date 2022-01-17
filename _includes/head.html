@@ -43,5 +43,16 @@
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
+
+    function createAcceptCookies() {
+      createCookie('cookie-accepted', 'true', 31);
+      if(window.ageCheckOK) {
+        createCookie('age-check', 'true', 31);
+      }
+    }
+
+    function canStoreCookies() {
+      return readCookie('cookie-accepted') === 'true';
+    }
   </script>
 </head>

@@ -23,7 +23,7 @@
     }
 
     document.querySelector('#age-ok').addEventListener("click",function() {
-      if (readCookie('cookie-accepted') == 'true') {
+      if (canStoreCookies()) {
         //only create cookie if cookies are allowed
         createCookie('age-check','true',31);
       } else {
@@ -34,8 +34,8 @@
     });
 
     document.querySelector('#accept-cookies').addEventListener("click",function() {
-      createCookie('cookie-accepted','true',31);
       document.querySelector('#cookie-notice').classList.add('hidden');
+      createAcceptCookies();
     });
   </script>
 {% endif %}
