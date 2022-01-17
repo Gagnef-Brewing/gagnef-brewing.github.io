@@ -1,18 +1,33 @@
+{% if page.title %}
+  {% assign title = page.title | prepend: " - " | prepend: site.title %}
+{% else %}
+  {% assign title = site.title %}
+{% endif %}
+
+{% if page.og_image %}
+  {% assign og_image = page.og_image %}
+{% else %}
+  {% assign og_image = site.og_image %}
+{% endif %}
+
+{% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>{% if page.title %}{{ page.title | prepend: " - " | prepend: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ title }}</title>
   <meta name="description" content="{{ site.description }}">
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css?v=' | append: site.version | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:title" content="{{site.title}}" />
+  <link rel="canonical" href="{{ url }}">
+
+  <meta property="og:title" content="{{ title }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gagnefbrewing.com" />
-  <meta property="og:image" content="{{site.og_image}}" />
+  <meta property="og:url" content="{{ url }}" />
+  <meta property="og:image" content="{{ og_image }}" />
   <meta property="og:locale" content="sv_SE" />
 
   <link rel="DNS-prefetch" href="//fonts.googleapis.com"/>

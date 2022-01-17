@@ -21,10 +21,11 @@
 title: Gagnef Brewing
 email: oskaremilsson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Gagnef Brewing
+  Hantverksöl från Gagnef, Dalarna.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://gagnefbrewing.se # the base hostname & protocol for your site, e.g. http://example.com
 domain: gagnefbrewing.se
+og_image: https://gagnefbrewing.se/assets/images/og/og_image.jpg
 version: 0.0.10
 
 # Build settings
