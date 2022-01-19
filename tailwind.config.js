@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './_includes/**/*.html',
@@ -20,9 +22,6 @@ module.exports = {
         },
         'gagnef-gray': '#384042',
       },
-      screens: {
-        'ty': '290px',
-      }
     },
   },
   variants: {},
