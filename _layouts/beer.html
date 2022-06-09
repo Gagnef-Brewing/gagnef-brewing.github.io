@@ -4,10 +4,12 @@ layout: default
 
 <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 md:py-16 md:flex-row md:items-center">
   <div class="flex items-center justify-center w-full lg:w-1/2">
-    <picture>
-      <source class="rounded-md max-h-[600px]" srcset="{{ page.image }}.webp" type="image/webp">
-      <img class="rounded-md max-h-[600px]" src="{{ page.image }}.png">
-    </picture>
+    {%
+      include components/3d-can.html
+      rotation_y = page.can_rotation_y
+      label = page.can_label
+      auto_rotate = true
+    %}
   </div>
 
   <div class="w-full lg:w-1/2">

@@ -2,9 +2,10 @@
 layout: home
 ---
 
-<div class="w-full bg-center bg-cover min-h-screen flex flex-col" style="background-image: url(/assets/images/home-bg.jpg),url(/assets/images/home-bg-low-res.jpg);">
+<div class="bg-fixed w-full bg-center bg-cover min-h-screen flex flex-col" style="background-image: url(/assets/images/home-bg.jpg),url(/assets/images/home-bg-low-res.jpg);">
+  <div class="bg-gray-900 bg-opacity-20">
   {% include molecules/under-contruction.html %}
-  <nav class="z-10">
+  <nav>
     <div class="container px-6 py-4 mx-auto lg:flex sm:justify-between justify-center lg:items-center">
         <div class="lg:flex lg:items-center">
             <div class="flex items-center justify-center sm:justify-between">
@@ -18,23 +19,33 @@ layout: home
     </div>
   </nav>
 
-  <div class="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-gray-900 bg-opacity-20 space-y-16 pb-4">
-    <h1 class="text-5xl sm:text-8xl uppercase font-bold text-white text-center font-title drop-shadow-lg">
-      Vi brygger i Gagnef
-    </h1>
+  <h1 class="text-5xl sm:text-8xl uppercase font-bold text-white text-center font-title drop-shadow-lg">
+    Vi brygger i Gagnef
+  </h1>
 
-    <div class="flex flex-col space-y-8 sm:flex-row sm:space-x-8 sm:space-y-0 items-center justify-center">
-      <a href="/products" class="w-full sm:w-auto">
-        {% include components/big-button.html
-          text="Se våra produkter"
-        %}
-      </a>
+  <div class="flex items-center justify-center w-full mt-6 lg:mt-0">
+    {%
+      include components/3d-can.html
+      rotation_y = 0.4
+      label = "/assets/labels/etikett-vanlig.jpeg"
+      auto_rotate = true
+    %}
+  </div>
 
-      <a href="/brewery" class="w-full sm:w-auto">
-        {% include components/big-button.html
-          text="Läs mer om bryggeriet"
-        %}
-      </a>
-    </div>
+  <div class="flex flex-col p-4 space-y-8 my-6 sm:flex-row sm:space-x-8 sm:space-y-0 items-center justify-center">
+    <a href="/products" class="w-full sm:w-auto">
+      {% include components/big-button.html
+        text="Se våra produkter"
+        textColor="white"
+        bgColor="gagnef-green"
+      %}
+    </a>
+
+    <a href="/brewery" class="w-full sm:w-auto">
+      {% include components/big-button.html
+        text="Läs mer om bryggeriet"
+      %}
+    </a>
+  </div>
   </div>
 </div>

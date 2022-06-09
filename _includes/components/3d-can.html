@@ -1,0 +1,17 @@
+<div id="preview" class="hide" style="display: block;">
+  <canvas id="canvas"></canvas>
+</div>
+
+{% if include.auto_rotate == true %}
+  <input id="auto-rotate" type="hidden" value="true">
+{% endif %}
+
+{% if include.enable_controls == true %}
+  <input id="enable-controls" type="hidden" value="true">
+{% endif %}
+
+<input id="rotation-y" type="hidden" value={{include.rotation_y}}>
+<input id="can-label" type="hidden" value={{include.label}}>
+
+<script src="../assets/js/modules/loadjs.min.js"></script>
+<script type="module" src="../assets/js/initalize.js"></script>

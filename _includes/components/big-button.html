@@ -1,3 +1,30 @@
-<button class="w-full sm:w-auto text-xl sm:text-2xl px-4 py-2 font-medium tracking-wide text-white transition-colors duration-200 transform rounded-md ring ring-white hover:bg-teal-600 focus:outline-none focus:ring-opacity-80">
+<button class="
+w-full
+sm:w-auto
+text-xl
+sm:text-2xl
+px-4 py-2
+font-medium
+tracking-wide
+{% if include.textColor %}
+  text-{{ include.textColor  }}
+{% else %}
+  text-white
+{% endif %}
+transition-colors
+duration-200
+transform
+rounded-md
+ring
+ring-white
+{% if include.bgColor %}
+  bg-{{ include.bgColor  }}-500
+  hover:bg-{{ include.bgColor  }}-600
+{% else %}
+  hover:bg-teal-600
+{% endif %}
+focus:outline-none
+focus:ring-opacity-80
+">
   {{ include.text }}
 </button>

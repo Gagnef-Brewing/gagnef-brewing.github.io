@@ -4,3 +4,43 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Simvoni";
+  font-style: normal;
+  font-weight: 900;
+  src: url(/assets//fonts/Simvoni-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Simvoni";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/Simvoni-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Simvoni";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/Simvoni.ttf) format("truetype");
+}
+
+.preview_fullscreen {
+  top: 0;
+  background: #222;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  left: 0;
+  z-index: 10;
+  border-radius: 0 !important;
+}
+
+#preview_canvas {
+  margin: auto;
+}
+
+.canvas-container {
+  display:none !important;
+}

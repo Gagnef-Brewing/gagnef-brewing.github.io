@@ -4,16 +4,17 @@
   <div class="container mx-auto bg-white min-h-screen">
       <div class="items-center flex flex-col sm:flex-row">
         <div class="flex items-center justify-center w-full mt-6 lg:mt-0">
-          <a href="{{ beer.url | prepend: beer.baseurl }}">
-            <picture>
-              <source class="w-full lg:max-w-2xl rounded-md max-h-screen p-16" srcset="{{ beer.image }}.webp" type="image/webp">
-              <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16" src="{{ beer.image }}.png">
-            </picture>
-          </a>
+          {%
+            include components/3d-can.html
+            rotation_y = beer.can_rotation_y
+            label = beer.can_label
+          %}
         </div>
 
         <div class="sm:flex sm:flex-col mt-6 space-y-4">
-          <h1 class="text-6xl font-title font-semibold text-gray-800 uppercase lg:text-8xl text-center">{{ beer.name }}, {{ beer.alcohol }}</h1>
+          <a href="{{ beer.url | prepend: beer.baseurl }}">
+            <h1 class="text-6xl font-title font-semibold text-gray-800 uppercase lg:text-8xl text-center">{{ beer.name }}, {{ beer.alcohol }}</h1>
+          </a>
 
           <div class="sm:flex w-full justify-center">
             <a href="{{ beer.url | prepend: beer.baseurl }}">

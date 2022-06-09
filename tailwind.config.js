@@ -11,16 +11,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['Simvoni', 'sans'],
         title: ['"EB Garamond"', 'serif'],
       },
       colors: {
-        white: '#fffff2',
-        gagnef_green: {
+        white: '#f6f5f6',
+        'gagnef-green': {
           100: '#f7fafc',
-          // ...
+          500: '#016c67',
           900: '#fff000',
         },
-        'gagnef-gray': '#384042',
+        'gagnef-gray': '#003743',
       },
     },
   },
