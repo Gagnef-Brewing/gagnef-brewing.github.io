@@ -21,7 +21,7 @@
 title: Gagnef Brewing
 email: info@gagnefbrewing.se
 description: >- # this means to ignore newlines until "baseurl:"
-  Vi brygger i Gagnef
+  Gagnefs lokala nanobryggeri
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://gagnefbrewing.se # the base hostname & protocol for your site, e.g. http://example.com
 domain: gagnefbrewing.se
