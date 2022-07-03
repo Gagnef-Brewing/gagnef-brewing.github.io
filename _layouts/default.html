@@ -6,7 +6,7 @@
   <body>
     {% include menu.html %}
 
-    <div class="bg-white md:container md:mx-auto pb-4">
+    <div class="bg-white lg:container lg:mx-auto pb-4">
       {% assign breadcrumbs = page.url | split: '/' | shift %}
       {%
         include components/breadcrumbs.html
