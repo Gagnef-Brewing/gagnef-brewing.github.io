@@ -26,6 +26,13 @@
   src: url(/assets/fonts/Simvoni.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Bitter sweet";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/Bittersweet-Regular.otf) format("opentype");
+}
+
 .preview_fullscreen {
   top: 0;
   background: #222;

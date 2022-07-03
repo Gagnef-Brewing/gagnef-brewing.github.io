@@ -2,7 +2,7 @@
   <div id="age-check" class="z-20 fixed w-screen h-screen top-0 left-0 bg-white bg-opacity-50 flex justify-center sm:items-center sm:pt-0 pt-32 items-start backdrop-blur-md overflow-hidden">
     <div class="max-w-md px-8 py-4 mx-auto mt-16 bg-white rounded-lg shadow-lg">
       <div class="flex justify-center -mt-16 md:justify-end">
-        <img class="object-cover w-20 h-20" alt="Logo" src="/assets/images/logo.png">
+        <img class="object-cover w-20 h-20" alt="Logo" src="/assets/images/logo.svg">
       </div>
 
       <h2 class="mt-2 text-2xl font-semibold text-gray-800 md:mt-0 md:text-3xl">Ålderskontroll</h2>
@@ -10,7 +10,7 @@
       <p class="mt-2 text-gray-600">Här förekommer det information om <span class="font-medium">alkoholhaltiga</span> drycker och du <span class="font-medium">måste</span> vara över 20 år för att gå vidare.</p>
       <p class="mt-2 text-xs italic text-gray-600">Genom att <span id="accept-cookies" class="hover:underline cursor-pointer font-semibold">tillåta kakor</span> sparas ditt val.</p>
       
-      <div class="flex justify-between mt-4 ">
+      <div class="flex justify-between mt-4">
         <button id="age-ok" class="text-l font-medium text-teal-500">Jag är över 20 år</button>
         <a href="//leoslekland.se/" id="age-fail" class="text-l text-teal-500">Jag är ett barn</a>
       </div>
@@ -24,10 +24,10 @@
 
     document.querySelector('#age-ok').addEventListener("click",function() {
       if (canStoreCookies()) {
-        //only create cookie if cookies are allowed
-        createCookie('age-check','true',31);
+        // only create cookie if cookies are allowed
+        createCookie('age-check', 'true', 365); // Systembolaget saves for 1 year, assume ok
       } else {
-        //store in memory to save cookie when cookies are allowed
+        // store in memory to save cookie when cookies are allowed
         window.ageCheckOK = true;
       }
       document.querySelector('#age-check').classList.add('hidden');

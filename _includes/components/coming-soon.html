@@ -1,0 +1,11 @@
+<div class="mt-5 bg-gagnef-moss-500 text-white max-w-[350px] p-5 rounded-2xl">
+  <h3 class="text-2xl">Kommer snart</h3>
+  <hr class="my-2">
+  <p class="text-lg">
+    {% if include.extra_info %}
+      {{ include.extra_info}}
+    {% else %}
+      Ölen är planerad och väntar på att bryggas.
+    {% endif %}
+  </p>
+</div>

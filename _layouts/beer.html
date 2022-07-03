@@ -12,8 +12,16 @@ layout: default
 
   <div class="w-full lg:w-1/2">
       <div class="lg:max-w-lg">
-        <h1 class="font-title text-4xl font-medium tracking-wide text-gray-800 lg:text-6xl">{{ page.name }}</h1>
+        <h1 class="text-4xl font-semibold tracking-wide text-gray-800 lg:text-6xl">{{ page.name }}</h1>
         <p class="mt-2 text-gray-600">{{ page.description }}</p>
+
+        {% if page.coming_soon == true %}
+          {%
+            include components/coming-soon.html
+            extra_info = page.coming_soon_info
+          %}
+        {% endif %}
+
         <div class="grid gap-6 mt-8 sm:grid-cols-2">
             <div class="flex items-center text-gray-800 -px-3">
                 <svg class="w-6 h-6 mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,6 +56,7 @@ layout: default
             </div>
         </div>
       </div>
+      
   </div>
 </div>
 

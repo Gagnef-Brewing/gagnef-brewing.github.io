@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Simvoni', 'sans'],
-        title: ['"EB Garamond"', 'serif'],
+        title: ['"Bitter sweet"', 'sans'],
       },
       colors: {
         black: '#0e100f',

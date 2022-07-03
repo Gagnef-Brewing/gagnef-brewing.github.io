@@ -1,29 +1,31 @@
 {% assign beers = site.beers | sort: "sale_date" | reverse %}
 
 {% for beer in beers %}
-  <div class="container mx-auto bg-white min-h-screen">
+  <div class="bg-white min-h-screen">
       <div class="items-center flex flex-col sm:flex-row">
-        <div class="flex items-center justify-center w-full mt-6 lg:mt-0">
+        <div class="flex items-center justify-center sm:w-1/2 mt-6 lg:mt-0">
           <a href="{{ beer.url | prepend: beer.baseurl }}">
             <picture>
               <source srcset="{{ beer.image }}.webp" type="image/webp">
-              <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16" src="{{ beer.image }}.png">
+              <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16 hover:scale-95" src="{{ beer.image }}.png">
             </picture>
           </a>
         </div>
 
-        <div class="sm:flex sm:flex-col mt-6 space-y-4">
-          <a href="{{ beer.url | prepend: beer.baseurl }}">
-            <h1 class="text-6xl font-title font-semibold text-gray-800 uppercase lg:text-8xl text-center">{{ beer.name }}, {{ beer.alcohol }}</h1>
+        <div class="sm:flex sm:flex-col mt-6 space-y-4 px-4">
+          <a href="{{ beer.url | prepend: beer.baseurl }}" class="hover:opacity-75">
+            <h1 class="text-6xl font-semibold uppercase lg:text-8xl">{{ beer.name }}</h1>
+            <div class="pl-1">
+              <h2 class="text-xl">{{ beer.classification }}</h2>
+              <h2 class="text-4xl">{{ beer.type }}, {{ beer.alcohol }}</h2>
+              {% if beer.coming_soon == true %}
+              <div class="mt-5 p-2 rounded-xl bg-gagnef-moss-500 text-white inline-block">
+                <p class="text-sm">Kommer snart</p>
+              </div>
+              {% endif %}
+              <p class="text-xl underline underline-offset-8 mt-5">Läs mer om ölen</p>
+            </div>
           </a>
-
-          <div class="sm:flex w-full justify-center">
-            <a href="{{ beer.url | prepend: beer.baseurl }}">
-              <button class="my-4 w-full sm:w-auto text-xl sm:text-xl px-4 py-2 font-medium tracking-wide text-gray-600 transition-colors duration-200 transform rounded-md ring ring-teal-600 hover:bg-teal-600 focus:outline-none focus:ring-opacity-80 hover:text-white">
-                Läs mer
-              </button>
-            </a>
-          </div>
         </div>
       </div>
   </div>
