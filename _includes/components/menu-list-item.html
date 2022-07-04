@@ -1,3 +1,9 @@
-<a href="{{ include.url }}" class="mt-2 transition-colors duration-300 transform md:mt-0 sm:mx-4 hover:underline hover:underline-offset-8">
+{% if page.url contains include.url %}
+  {% assign active = "underline" %}
+{% else %}
+  {% assign active = "" %}
+{% endif %}
+
+<a href="{{ include.url }}" class="{{ active }} mt-2 transition-colors duration-300 transform md:mt-0 sm:mx-4 hover:underline underline-offset-8">
   {{ include.text }}
 </a>

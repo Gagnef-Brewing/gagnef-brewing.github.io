@@ -4,28 +4,10 @@ layout: home
 
 <div class="bg-fixed w-full bg-center bg-cover min-h-screen flex flex-col bg-[url('/assets/images/humlekottar.jpeg')]">
   <div class="relative flex flex-col min-h-screen bg-gradient-to-r from-gagnef-moss-500/50 to-gagnef-moss-500/50 backdrop-blur-sm">
-    <nav class="container p-4 mx-auto lg:flex sm:justify-between justify-center lg:items-center">
-        <div class="sm:flex sm:items-center">
-            <div class="flex items-center justify-center sm:justify-between">
-                <div>
-                    <a class="" href="/">
-                      <img src="/assets/images/logo.svg" alt="gagnef brewing logo" class="h-24 my-4 transition duration-200 transform invert hover:scale-[1.1]"/>
-                    </a>
-                </div>
-            </div>
-            <div class="flex text-white space-x-5 items-center justify-center text-xl">
-              {% for page_data in site.data.page_data %}
-                {% for pg in page_data %}
-                  {%
-                    include components/menu-list-item.html
-                    url = pg.url
-                    text = pg.title
-                  %}
-                {% endfor %}
-              {% endfor %}
-            </div>
-        </div>
-    </nav>
+    {%
+      include menu.html
+      invert = "invert"
+    %}
 
     <div class="flex grow flex-col justify-center mt-[-160px]">
       <h1 class="font-title text-5xl sm:text-8xl uppercase font-bold text-gagnef-yellow-500 text-center drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
