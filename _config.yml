@@ -26,7 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://gagnefbrewing.se # the base hostname & protocol for your site, e.g. http://example.com
 domain: gagnefbrewing.se
 og_image: /assets/images/og/og_image.jpg
-version: 0.1.5
+version: 0.1.6
 
 # Build settings
 # theme: minima

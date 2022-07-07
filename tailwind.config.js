@@ -18,6 +18,7 @@ module.exports = {
         black: '#0e100f',
         white: '#f6f5f6',
         'gagnef-green': {
+          300: '#88B18A',
           500: '#51a446',
         },
         'gagnef-yellow': {
