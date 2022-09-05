@@ -7,7 +7,7 @@
           <a href="{{ beer.url | prepend: beer.baseurl }}">
             <picture>
               <source srcset="{{ beer.image }}.webp" type="image/webp">
-              <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16 hover:scale-95" src="{{ beer.image }}.png">
+              <img class="w-full lg:max-w-2xl rounded-md max-h-screen p-16 hover:scale-95 pointer-events-none" src="{{ beer.image }}.png">
             </picture>
           </a>
         </div>
