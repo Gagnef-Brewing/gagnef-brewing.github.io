@@ -1,6 +1,4 @@
-beers:
-  title: Våra öl
+- title: Våra öl
   url: /beers
-brewery:
-  title: Bryggeriet
+- title: Bryggeriet
   url: /brewery

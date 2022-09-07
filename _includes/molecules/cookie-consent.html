@@ -1,13 +1,15 @@
 <div id="cookie-notice" class="z-20 fixed block bottom-0 left-0 p-4 bg-white w-full text-gray-600 border-t">
   <p class="mb-4">Vi vill gärna bjuda på en kaka eller två för att hemsidan ska bli så mumsig som möjligt.</p>
   
-  <a id="cookie-notice-accept" class="mr-2 cursor-pointer hover:underline underline-offset-8 text-xl p-2">
-    <!--<button class="my-4 text-xl sm:text-xl px-4 py-2 font-medium tracking-wide text-gray-600 transition-colors duration-200 transform rounded-md ring ring-teal-600 hover:bg-teal-600 focus:outline-none focus:ring-opacity-80 hover:text-white">
-      Ta emot kaka
-    </button>-->
-    Ta emot kakor
-  </a>
-  <a href="/cookies-privacy" class="hover:underline italic">Mer info</a>
+  <div class="flex items-center">
+    <p id="cookie-notice-accept" class="mr-2 cursor-pointer hover:underline underline-offset-8 text-xl p-2">
+      <!--<button class="my-4 text-xl sm:text-xl px-4 py-2 font-medium tracking-wide text-gray-600 transition-colors duration-200 transform rounded-md ring ring-teal-600 hover:bg-teal-600 focus:outline-none focus:ring-opacity-80 hover:text-white">
+        Ta emot kaka
+      </button>-->
+      Ta emot kakor
+    </p>
+    <a href="/cookies-privacy" class="hover:underline italic">Vad använder vi kakor till?</a>
+  </div>
 </div>
 <script>
   if(canStoreCookies()) {

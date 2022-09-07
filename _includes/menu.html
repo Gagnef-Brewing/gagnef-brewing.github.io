@@ -10,13 +10,11 @@
         </div>
         <div class="flex text-black space-x-5 items-center justify-center text-xl {{ include.invert }}">
           {% for page_data in site.data.page_data %}
-            {% for pg in page_data %}
-              {%
-                include components/menu-list-item.html
-                url = pg.url
-                text = pg.title
-              %}
-            {% endfor %}
+            {%
+              include components/menu-list-item.html
+              url = page_data.url
+              text = page_data.title
+            %}
           {% endfor %}
         </div>
       </div>
