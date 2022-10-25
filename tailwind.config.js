@@ -43,6 +43,7 @@ module.exports = {
           500: '#003743',
         },
         'gagnef-moss': {
+          300: '#02968f',
           500: '#016c67',
         },
         'gagnef-raspberry': {
