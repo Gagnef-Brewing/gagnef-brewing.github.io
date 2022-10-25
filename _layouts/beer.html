@@ -15,6 +15,13 @@ layout: default
         <div class="lg:max-w-lg">
           <h1 class="text-4xl font-semibold tracking-wide text-gray-800 lg:text-6xl">{{ page.name }}</h1>
           <p class="mt-2 text-gray-600">{{ page.description }}</p>
+          {% if page.about_type_link %}
+            <div class="mt-2">
+              <a class="font-semibold text-gray-600 hover:underline hover:underline-offset-8" href="{{page.about_type_link}}" target="_blank">
+                Läs mer om ölstilen på systembolaget.se.
+              </a>
+            </div>
+          {% endif %}
 
           {% if page.coming_soon == true %}
             {%
