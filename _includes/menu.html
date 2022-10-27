@@ -9,20 +9,24 @@
           </div>
         </div>
         <div class="flex flex-col md:flex-row text-black space-x-5 items-center justify-center text-xl {{ include.invert }}">
-          {% for page_data in site.data.page_data %}
-            {% assign pd = page_data[1] %}
+          <div class="space-x-5">
+            {% for page_data in site.data.page_data %}
+              {% assign pd = page_data[1] %}
+              {%
+                include components/menu-list-item.html
+                url = pd.url
+                text = pd.title
+              %}
+            {% endfor %}
+          </div>
+          <div class="mt-2 md:mt-0 p-2">
             {%
               include components/menu-list-item.html
-              url = pd.url
-              text = pd.title
+              url = "https://www.systembolaget.se/sortiment/?q=gagnef%20brewing"
+              text = "Beställ på Systembolaget"
+              target = "_blank"
             %}
-          {% endfor %}
-          {%
-            include components/menu-list-item.html
-            url = "https://www.systembolaget.se/sortiment/?q=gagnef%20brewing"
-            text = "Beställ på Systembolaget"
-            target = "_blank"
-          %}
+          </div>
         </div>
       </div>
   </div>
