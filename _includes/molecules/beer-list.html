@@ -20,7 +20,7 @@
               <h2 class="text-4xl">{{ beer.type }}, {{ beer.alcohol }}</h2>
               {% if beer.coming_soon == true %}
               <div class="mt-5 p-2 rounded-xl bg-gagnef-moss-500 text-white inline-block">
-                <p class="text-sm">Kommer snart</p>
+                <p class="text-sm">{% if beer.coming_soon_info %} {{ beer.coming_soon_info }} {% else %} Kommer snart {% endif %}</p>
               </div>
               {% endif %}
               <p class="text-xl underline underline-offset-8 mt-5">Läs mer om {{ beer.name }}</p>
