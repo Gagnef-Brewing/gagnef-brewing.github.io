@@ -29,7 +29,7 @@ layout: default
             %}
           {% endif %}
 
-          {% if page.coming_soon != true %}
+          {% if page.coming_soon != true and page.SB_number != null %}
             <div class="block mt-5 bg-gagnef-moss-500 p-5 max-w-[350px] rounded-2xl text-center text-white">
               {% if page.release_info %}
                 <h3 class="text-xl text-left">{{ page.release_info}}</h3>

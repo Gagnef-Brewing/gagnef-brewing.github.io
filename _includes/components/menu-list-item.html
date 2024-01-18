@@ -4,7 +4,7 @@
   {% assign active = false %}
 {% endif %}
 
-<a href="{{ include.url }}" {% if include.target %} target="{{include.target}}" {% endif %} class="{% if active %} underline {% endif %}  mt-2 transition-colors duration-300 transform md:mt-0 sm:mx-4 hover:underline underline-offset-8">
+<a href="{{ include.url }}" {% if include.target %} target="{{include.target}}" {% endif %} class="{% if active %} underline {% endif %} uppercase font-bold mt-2 transition-colors duration-300 transform md:mt-0 sm:mx-4 hover:underline underline-offset-8">
   {% if active %}
     <h1 class="inline">{{ include.text }}</h1>
   {% else %}
